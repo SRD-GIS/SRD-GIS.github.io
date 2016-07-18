@@ -1,6 +1,5 @@
-<h1>something's wrong</h1>
+<h1>Proj4js - non mercator projection</h1>
 <h3>-- close, oh so close --</h3>
-<p>fishy</p>
-<p>WMS source: http://tiles.arcgis.com/tiles/Uj11SaUIGBo5JYFY/arcgis/rest/services/Sayward_Basemap/MapServer</p>
-
-<img src="https://raw.githubusercontent.com/SRD-GIS/SRD-GIS.github.io/master/Images/sillywalks.jpg"
+<p>but still fishy - not right</p>
+<p>WMS source: <a href="http://tiles.arcgis.com/tiles/Uj11SaUIGBo5JYFY/arcgis/rest/services/Sayward_Basemap/MapServer" target="_blank"> http://tiles.arcgis.com/tiles/Uj11SaUIGBo5JYFY/arcgis/rest/services/Sayward_Basemap/MapServer</a></p>
+<p>I get this <img src="MapWindow.png" height="400" width="500"> <br>when I use <a href="Tst.html" target="_blank">this</a></p>

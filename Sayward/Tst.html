@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Tst Proj4js</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- Load Leaflet from CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet-src.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0/esri-leaflet.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Proj4JS via rawgit.com
+in production you'd be better off hosting these libraries yourself -->
+    <script src="https://rawgit.com/proj4js/proj4js/2.3.12/dist/proj4-src.js"></script>
+    <script src="https://rawgit.com/kartena/Proj4Leaflet/1.0.0-beta.1/src/proj4leaflet.js"></script>
+
+    <div id="map"></div>
+
+    <script>
+        var crs = new L.Proj.CRS('EPSG:26910', '+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs', {
+            //+towgs84=0,0,0,0,0,0,0 
+            origin: [-5120900.0, 9998100.0],
+            resolutions: [
+            7.9375158750317505,
+            3.9687579375158752,
+            1.9843789687579376,
+            0.9921894843789688,
+            0.4960947421894844,
+            0.26458386250105836
+    ]
+        });
+
+        var map = L.map('map', {
+            crs: crs
+        }).setView([50, -125], 4);
+
+
+        L.esri.tiledMapLayer({
+            url: 'http://tiles.arcgis.com/tiles/Uj11SaUIGBo5JYFY/arcgis/rest/services/Sayward_Basemap/MapServer',
+            maxZoom: 5,
+            minZoom: 0,
+            continuousWorld: true,
+            attribution: 'SRD &copy; 2016',
+            //errorTileUrl: 'https://downloads2.esri.com/support/TechArticles/blank256.png'
+        }).addTo(map);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelsey Bay StreetView</title>
+    <script src='https://npmcdn.com/mapillary-js@1.5.0/dist/mapillary-js.min.js'></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link href='https://npmcdn.com/mapillary-js@1.5.0/dist/mapillary-js.min.css' rel='stylesheet' />
+</head>
+
+<body>
+    <h1>Mapillary - StreetView</h1>
+    <h2>Kelsey Bay</h2>
+
+
+    <div id=streetview>
+        <div id='mly' style='width: 640px; height: 480px;' />
+
+        <script>
+            var mly = new Mapillary.Viewer(
+                'mly',
+                'bGF0dWp0cURTX05DS3hlblVNUHJDQTozMzFlNDViOGMyYTZiZDA5',
+                'wW59ZWb6mLWR7_2ucFX7xg'
+            );
+        </script>
+    </div>
+       
+    <div>
+        <h4>Link to <a href="https://www.mapillary.com/app/?lat=50.39109909999999&lng=-125.959772&z=17&pKey=wW59ZWb6mLWR7_2ucFX7xg" target="_blank">map</a></h4>        </div>
+</body>
+
+</html>

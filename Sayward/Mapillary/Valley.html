@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Valley StreetView</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <script src='https://npmcdn.com/mapillary-js@1.5.0/dist/mapillary-js.min.js'></script>
+    <link href='https://npmcdn.com/mapillary-js@1.5.0/dist/mapillary-js.min.css' rel='stylesheet' />
+</head>
+
+<body>
+    <h1>Mapillary - StreetView</h1>
+    <h2>Sayward Valley</h2>
+
+
+
+    <div id='mly' style='width: 640px; height: 480px;'>
+
+        <script>
+            var sKey = '5y8FvAUZ4k1-rKZCLDjlkg'
+            var pKey = 'CKa-HXPAqBMUEwxwwr8CeA'
+
+            var mly = new Mapillary.Viewer(
+                'mly',
+                'bGF0dWp0cURTX05DS3hlblVNUHJDQTozMzFlNDViOGMyYTZiZDA5',
+                pKey
+            );
+        </script>
+        
+    </div>
+
+    <h4>Link to <a href="https://www.mapillary.com/app/?lat=50.31245430000001&lng=-125.9191633&z=15.05&pKey=CKa-HXPAqBMUEwxwwr8CeA" target="_blank">map</a></h4>
+
+</body>
+
+</html>
